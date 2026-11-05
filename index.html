@@ -106,10 +106,12 @@ h2{margin:0;font-family:var(--f-head);font-weight:700;font-size:clamp(28px,3.6vw
 .classes div em{display:block;font-style:normal;font-size:24px;margin-bottom:6px}
 .classes div:hover{border-color:var(--blue);box-shadow:0 0 22px rgba(70,166,255,.5);transform:translateY(-3px);color:#fff}
 .ranks{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;padding-inline:6px}
-.rank{position:relative;border:1px solid rgba(110,180,255,.35);padding:16px 14px;background:linear-gradient(180deg,rgba(14,40,90,.5),rgba(4,10,24,.9));display:flex;flex-direction:column;gap:6px;transform:skewX(-6deg)}
+.rank{position:relative;border:1px solid rgba(110,180,255,.35);padding:18px 12px;align-items:center;background:linear-gradient(180deg,rgba(14,40,90,.5),rgba(4,10,24,.9));display:flex;flex-direction:column;gap:6px;transform:skewX(-6deg)}
 .rank>*{transform:skewX(6deg)}
-.rank em{font-style:normal;font-size:22px}
-.rank b{font-family:var(--f-head);font-weight:700;font-size:18px;letter-spacing:1px;text-transform:uppercase}
+.rank img{width:72px;height:72px;align-self:center;filter:drop-shadow(0 8px 14px rgba(0,0,0,.55));transition:transform .25s}
+.rank:hover img{transform:skewX(6deg) scale(1.08)}
+.rank b{font-family:var(--f-head);font-weight:700;font-size:18px;letter-spacing:1px;text-transform:uppercase;color:var(--rc,#fff);text-align:center}
+.rank span{text-align:center}
 .rank span{font-family:var(--f-mono);font-size:11px;color:var(--dim)}
 .rank.cur{border-color:var(--blue);box-shadow:0 0 26px rgba(70,166,255,.55)}
 .rank.cur::after{content:"YOU";position:absolute;top:-10px;right:10px;transform:skewX(6deg);font-family:var(--f-mono);font-size:10px;background:var(--blue);color:#02101F;padding:2px 6px}
@@ -237,11 +239,11 @@ footer a{text-decoration:none}footer a:hover{text-decoration:underline}
 <p class="eyebrow">// rank ladder</p>
 <h2>Nobody spawns at max level</h2>
 <div class="ranks">
-<div class="rank cur"><em>🎭</em><b>Side Character</b><span>LV 1</span></div>
-<div class="rank"><em>🎬</em><b>Main Character</b><span>LV 25</span></div>
-<div class="rank"><em>🦸‍♂️</em><b>Hero</b><span>LV 100</span></div>
-<div class="rank"><em>🌟</em><b>Legend</b><span>LV 300</span></div>
-<div class="rank"><em>👑</em><b>Mythic</b><span>LV 999</span></div>
+<div class="rank cur" style="--rc:#AEB8C5"><img src="/badges/side-character.png" alt="" width="72" height="72"><b>Side Character</b><span>LV 1</span></div>
+<div class="rank" style="--rc:#FFD15C"><img src="/badges/main-character.png" alt="" width="72" height="72"><b>Main Character</b><span>LV 25</span></div>
+<div class="rank" style="--rc:#FF5A4F"><img src="/badges/hero.png" alt="" width="72" height="72"><b>Hero</b><span>LV 100</span></div>
+<div class="rank" style="--rc:#4FE3A6"><img src="/badges/legend.png" alt="" width="72" height="72"><b>Legend</b><span>LV 300</span></div>
+<div class="rank" style="--rc:#E18BFF"><img src="/badges/mythic.png" alt="" width="72" height="72"><b>Mythic</b><span>LV 999</span></div>
 </div>
 </div>
 </section>

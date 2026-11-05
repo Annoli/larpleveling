@@ -1,0 +1,5 @@
+{
+  "headers": [
+    { "source": "/badges/(.*)", "headers": [ { "key": "Access-Control-Allow-Origin", "value": "*" } ] }
+  ]
+}
