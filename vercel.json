@@ -1,5 +1,14 @@
 {
   "headers": [
-    { "source": "/badges/(.*)", "headers": [ { "key": "Access-Control-Allow-Origin", "value": "*" } ] }
-  ]
+    {
+      "source": "/badges/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ],
+  "cleanUrls": true
 }
